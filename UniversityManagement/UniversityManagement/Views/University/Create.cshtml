@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    <style>
+        h1 {
+            color: blue;
+        }
+         label.error {
+             color: red;
+             font-style: italic;
+         }
+    </style>
+</head>
+<body>
+<h1>Save Department</h1><br/>
+
+<div>
+    <form method="POST" action="/University/Save" id="saveDepartmentForm">
+        <table>
+            <tr>
+                <td><label for="Name">Name</label></td>
+                <td><input type="text" id="Name" name="Name"/></td>
+            </tr>
+            <tr>
+                <td><label for="Code">Code</label></td>
+                <td><input type="text" id="Code" name="Code"/></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Save"/></td>
+            </tr>
+        </table>
+    </form>
+</div>
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script>
+    $("#saveDepartmentForm").validate({
+        rules: {
+            Name: "required",
+            Code: "required"
+
+        },
+
+    });
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,38 @@
+﻿@using UniversityManagement.Models
+
+@{
+    ViewBag.Title = "ShowDepartments";
+    List<Department> departments = ViewBag.Departments;
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Name</th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Department department in departments)
+                  
+                {
+                    <tr>
+                        
+                        <td>@department.Code</td>
+                        <td>@department.Name</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
