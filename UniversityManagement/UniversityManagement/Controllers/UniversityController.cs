@@ -10,8 +10,7 @@ namespace UniversityManagement.Controllers
 {
     public class UniversityController : Controller
     {
-        //
-        // GET: /University/
+        
 
        DepartmentManager departmentManager = new DepartmentManager();
 
